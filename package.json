@@ -1,0 +1,35 @@
+{
+  "name": "v-show-case",
+  "version": "0.0.0",
+  "description": "conditional logic for vue's v-show directive",
+  "author": {
+    "name": "amdl89"
+  },
+  "private": false,
+  "repository": "https://github.com/amdl89/v-show-case",
+  "type": "module",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "vue",
+    "v-show",
+    "conditional"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.3.4"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.3.1",
+    "vite": "^4.4.9"
+  }
+}
