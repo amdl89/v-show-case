@@ -1,6 +1,6 @@
 {
   "name": "v-show-case",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "conditional logic for vue's v-show directive",
   "author": {
     "name": "amdl89"
