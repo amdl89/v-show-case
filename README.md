@@ -31,8 +31,8 @@ The following template will show the second paragraph as it is the first element
 
 ```vue
 <template>
-    <show-case>
-        <p v-show-when="abc">1</p>
+    <v-show-case>
+        <p v-show-when="x">1</p>
 
         <!-- displayed -->
         <p v-show-when="true">2</p>
@@ -40,7 +40,7 @@ The following template will show the second paragraph as it is the first element
         <p v-show-when="false">3</p>
 
         <p v-show-else>4</p>
-    </show-case>
+    </v-show-case>
 </template>
 
 <script>
@@ -56,7 +56,7 @@ export default {
 
 ## Compile time validation
 
-The `show-case` component must have at least one child with the `v-show-when` directive applied, followed by any number of `v-show-when`, and an optional `v-show-else` directive, which mush be present at last if used. This strucure can be checked at compile time by configuring the build tool to apply a transformer function during template compilation.
+The `v-show-case` component must have at least one child with the `v-show-when` directive applied, followed by any number of `v-show-when`, and an optional `v-show-else` directive, which mush be present at last if used. This strucure can be checked at compile time by configuring the build tool to apply a transformer function during template compilation.
 
 **Example vite configuration:**
 
