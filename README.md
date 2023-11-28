@@ -56,7 +56,7 @@ export default {
 
 ## Compile time validation
 
-The `v-show-case` component must have at least one child with the `v-show-when` directive applied, followed by any number of `v-show-when`, and an optional `v-show-else` directive, which mush be present at last if used. This strucure can be checked at compile time by configuring the build tool to apply a transformer function during template compilation.
+The `v-show-case` component must have at least one child with the `v-show-when` directive applied, followed by any number of `v-show-when`, and an optional `v-show-else` directive, which mush be present at last if used. This strucure can be checked at compile time by configuring the build tool to apply a transformer function during template compilation; though it does require a dynamic import in the vite config file.
 
 **Example vite configuration:**
 
@@ -65,15 +65,21 @@ import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import { validateVShowCase } from "v-show-case";
 
-export default defineConfig({
-    plugins: [
-        vue({
-            template: {
-                compilerOptions: {
-                    nodeTransforms: [validateVShowCase],
+export default (async function () {
+    const { validateVShowCase } = await import("v-show-case");
+
+    // https://vitejs.dev/config/
+    return defineConfig({
+        plugins: [
+            vue({
+                template: {
+                    compilerOptions: {
+                        nodeTransforms: [validateVShowCase],
+                    },
                 },
-            },
-        }),
-    ],
-});
+            }),
+        ],
+        ...
+    });
+})();
 ```
