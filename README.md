@@ -4,13 +4,11 @@ Vue 3 components for implementing conditional logic when using the v-show direct
 
 ---
 
-<!-- ## Install
-
-The library is available on [npm](https://www.npmjs.com/) as [`v-show-case`](https://www.npmjs.com/package/v-show-case).
+## Install
 
 ```bash
 npm install --save v-show-case
-``` -->
+```
 
 ## Setup
 
