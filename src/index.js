@@ -1,5 +1,5 @@
 import VShowCase from "./components/VShowCase.vue";
-import { validateVShowCase } from "./validateVShowCase";
+import validateVShowCase from "./validateVShowCase";
 
 const vShowCase = {
     install(app) {
